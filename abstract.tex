@@ -1,0 +1,33 @@
+\documentclass[uplatex,a4paper,12pt]{jsarticle}
+
+\usepackage{otf} %ローマ数字
+\pagestyle{empty}
+
+\makeatletter
+\def\supervisor#1{\gdef\@supervisor{#1}}
+\renewcommand{\@maketitle}{\newpage
+\noindent\\九州産業大学大学院
+\noindent\\情報科学研究科
+\noindent\\修士論文要旨(\@date)
+\vskip 20mm
+\begin{center}
+  \@title
+  \vskip 15mm
+  \@author\\(指導教員 \@supervisor)
+\end{center}
+\vskip 15mm
+}
+\makeatother
+
+\begin{document}
+
+\date{令和x年度}
+\title{title}
+\author{20GJKxx name}
+\supervisor{下川 俊彦 教授}
+\maketitle
+\thispagestyle{empty}
+
+body
+
+\end{document}
