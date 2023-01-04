@@ -1,0 +1,26 @@
+on:
+  pull_request_target:
+
+env:
+  FILENAME: thesis
+  FILENAME2: abstract
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    container: ghcr.io/smkwlab/latex-docker
+    steps:
+      - name: Checkout git repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.title }}
+      - name: Build a PDF file by latexmk
+        run: latexmk $FILENAME $FILENAME2
+      - name: Create a release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ${{ env.FILENAME }}.pdf
+            ${{ env.FILENAME2 }}.pdf
+          tag_name: ${{ github.event.pull_request.title }}
+          draft: true
+          prerelease: true
