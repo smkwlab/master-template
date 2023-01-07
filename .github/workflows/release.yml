@@ -7,7 +7,7 @@ env:
 jobs:
   release:
     runs-on: ubuntu-latest
-    container: ghcr.io/smkwlab/latex-docker
+    container: ghcr.io/smkwlab/latex-image
     steps:
       - name: Checkout git repo
         uses: actions/checkout@v3
