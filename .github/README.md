@@ -25,7 +25,7 @@
 下川研では、卒業論文を作成する標準的な環境として、LaTeX と GitHub を利用する。
 文章作成に LaTeX、バージョン管理およびバックアップとして GitHub を使う。
 
-LaTeX の環境は[下川研 LaTeX テンプレート](https://github.com/smkwlab/latex-environment#readme)に従って構築すること。
+LaTeX の環境は[下川研 LaTeX 環境](https://github.com/smkwlab/latex-environment#readme)に従って構築すること。
 
 文章用テンプレートとして、[4.3 修士論文用](https://github.com/smkwlab/latex-environment#43-修士論文用)を利用することで、
 本リポジトリのテンプレートがインストールされる。
