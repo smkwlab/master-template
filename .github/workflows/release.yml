@@ -4,6 +4,7 @@ on:
 env:
   FILENAME: thesis
   FILENAME2: abstract
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,5 +23,5 @@ jobs:
             ${{ env.FILENAME }}.pdf
             ${{ env.FILENAME2 }}.pdf
           tag_name: ${{ github.event.pull_request.title }}
-          draft: true
+          draft: false
           prerelease: true

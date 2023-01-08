@@ -1,0 +1,25 @@
+# プルリクエスト作成者は別途Assigneesに追加されるようになっています。
+
+# プルリクエストにReviewersを追加するには true に設定します。
+addReviewers: true
+
+# プルリクエストにAssigneesを追加する場合は true に設定します。
+addAssignees: true
+
+# Reviewerに設定するメンバを追加します。
+reviewers:
+  - toshi0806
+
+# Reviewersに追加するメンバ数を指定できます。
+# 追加メンバより設定数が少ない場合、ランダムで追加されます。
+# 0に設定すると全てのReviewersのメンバが追加されます。
+numberOfReviewers: 0
+
+# Assigneesrに設定するメンバを追加します。
+assignees:
+  - toshi0806
+
+# Assigneessに追加するメンバ数を指定できます。
+# 追加メンバより設定数が少ない場合、ランダムで追加されます。
+# 0に設定すると全てのAssigneesのメンバが追加されます。
+numberOfAssignees: 0
