@@ -16,7 +16,7 @@ jobs:
       - name: Checkout git repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.title }}
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: Build a PDF file by latexmk
         run: latexmk $FILENAME $FILENAME2
       - name: Create a release
@@ -25,6 +25,6 @@ jobs:
           files: |
             ${{ env.FILENAME }}.pdf
             ${{ env.FILENAME2 }}.pdf
-          tag_name: ${{ github.event.pull_request.title }}
+          tag_name: ${{ github.head_ref }}
           draft: false
           prerelease: true
