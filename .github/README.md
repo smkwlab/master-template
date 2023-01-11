@@ -16,7 +16,9 @@
     - [3.1 修士論文としての注意事項](#31-修士論文としての注意事項)
     - [3.2 日本語的な注意事項](#32-日本語的な注意事項)
     - [3.3 LaTeX的な注意事項](#33-latex的な注意事項)
-  - [4. Release機能](#4-release機能)
+  - [4. GitHub Actions](#4-github-actions)
+    - [4.1 Reviewer割当](#41-reviewer-割当)
+    - [4.2 PDF生成](#42-pdf-生成)
   - [5. その他](#5-その他)
 
 ## 0. 初期設定
@@ -178,10 +180,28 @@ Github 上で、Insights → Network
   - 差分が見やすいし、編集指示も出しやすい
 - `\\` による改行は `tabular` 環境以外では原則として使用不可
 
-## 4. Release機能
+## 4. GitHub actions
 
-Pull Request を発行すると、index.html を PDF 化したファイルを自動生成し、
+このリポジトリには2つの GitHub action が設定されている
+
+## 4.1 Reviewer 割当
+
+Pull Request を発行すると、[auto_assign_myteams.yml](.github/../auto_assign_myteams.yml) に基づき Reviewers と Assigneess を自動で設定する。
+デフォルトでは、どちらも下川(toshi0806)を指定している。
+下川研の学生はこのままで問題ない。
+他の研究室の学生が利用する場合には、ここの設定を変更すること。
+
+この機能が不要な場合には [auto_assign_myteams.yml](.github/../auto_assign_myteams.yml) を削除する。
+
+## 4.2 PDF 生成
+
+ブランチ名と同じタイトルで Pull Request を発行すると、sotsuron.tex と gaiyou.tex から PDF を自動生成し、
 GitHub 上の [Release](../../releases) に配置する。
+
+TeX 環境を持っていない人に PDF を見てもらうのに利用できる。
+ただし、ここで作成された Release は一般公開はされない。
+
+この機能が不要な場合には [release.yml](.github/../workflows/release.yml) を削除する。
 
 ## 5. その他
 
