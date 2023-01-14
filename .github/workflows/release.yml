@@ -1,3 +1,5 @@
+name: Build and Release PDF
+
 on:
   pull_request_target:
 
@@ -25,6 +27,6 @@ jobs:
           files: |
             ${{ env.FILENAME }}.pdf
             ${{ env.FILENAME2 }}.pdf
-          tag_name: ${{ github.head_ref }}
+          tag_name: ${{ github.head_ref }}-release
           draft: false
           prerelease: true
