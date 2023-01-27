@@ -1,0 +1,69 @@
+{
+    "plugins": [
+        "latex2e"
+    ],
+    "filters": {
+        "comments": true,
+        "allowlist": {
+            "allow": [
+                "/%[\\s\\S]*?$/m"
+            ]
+        }
+    },
+    "rules": {
+        "preset-ja-technical-writing": {
+            "max-kanji-continuous-len": {
+                "max": 8,
+                "allow": [
+                    "九州産業大学理工学部",
+                    "九州産業大学理工学部卒業論文",
+                    "九州産業大学情報科学部",
+                    "九州産業大学情報科学部卒業論文",
+                    "福岡女子大学国際文理学部"
+                ]
+            },
+            "no-invalid-control-character": true,
+            "no-unmatched-pair": true,
+            "sentence-length": {
+                "max": 100
+            },
+            "no-nfd": true,
+            "no-doubled-joshi": {
+                "min_interval": 1,
+                "strict": false,
+                "allow": ["も", "や", "にも"],
+                "separatorCharacters": [
+                    "．", "。"
+                ],
+                "commaCharacters": [
+                    "、", "，"
+                ]
+            },
+            "no-doubled-conjunction": true,
+            "no-doubled-conjunctive-particle-ga": true,
+            "no-dropping-the-ra": true,
+            "no-double-negative-ja": true,
+            "ja-unnatural-alphabet": true,
+            "ja-no-redundant-expression": true,
+            "ja-no-abusage": true,
+            "ja-no-successive-word": true,
+            "ja-no-weak-phrase": true,
+            "ja-no-mixed-period": {
+                "periodMark": "。",
+                "allowPeriodMarks": [],
+                "allowEmojiAtEnd": false,
+                "forceAppendPeriod": true
+            },
+            "ja-space-between-half-and-full-width": {
+                "space": "always",
+                "exceptPunctuation": true
+            },
+            "no-mix-dearu-desumasu": {
+                "preferInHeader": "である",
+                "preferInBody": "である",
+                "preferInList": "である",
+                "strict": true
+            }
+        }
+    }
+}

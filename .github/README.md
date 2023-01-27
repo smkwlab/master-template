@@ -27,10 +27,13 @@
 下川研では、卒業論文を作成する標準的な環境として、LaTeX と GitHub を利用する。
 文章作成に LaTeX、バージョン管理およびバックアップとして GitHub を使う。
 
-LaTeX の環境は[下川研 LaTeX 環境](https://github.com/smkwlab/latex-environment#readme)に従って構築すること。
-
-文章用テンプレートとして、[4.3 修士論文用](https://github.com/smkwlab/latex-environment#43-修士論文用)を利用することで、
-本リポジトリのテンプレートがインストールされる。
+手元の PC(mac) に既に LaTeX 環境を持っている場合、
+このリポジトリ単体で使っても良い。
+そうでない場合、
+LaTeX の環境は[下川研 LaTeX 環境利用方法](https://github.com/smkwlab/sotsuron-template/blob/main/.github/README-mlc.md)に従って構築すること。
+下川研 LaTeX 環境を使うことで、LaTeX 以外に
+textlint も利用可能となるので、
+この方法をとることを推奨する。
 
 ## 1. 基本的な使い方
 
@@ -57,10 +60,10 @@ LaTeX の環境は[下川研 LaTeX 環境](https://github.com/smkwlab/latex-envi
 
 ### 2.1 自分用のリモートリポジトリの作成
 
-1. ブラウザで[このリポジトリー](https://github.com/smkwlab/sotsuron-template)にアクセスし `Use this template`  ボタンをクリック
+1. ブラウザで[このリポジトリー](https://github.com/smkwlab/master-template)にアクセスし `Use this template`  ボタンをクリック
 1. リポジトリ作成画面になる
    - `Owner` は `smkwlab` のまま
-   - `Repository name` は、 `k99rs999-sotsuron` のように自分の学籍番号を入れ、さらに卒業論文であることが分かるような名前にする
+   - `Repository name` は、 `k99rs999-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
    - 公開範囲は `Private` のまま
 1. `Create repository from template` ボタンをクリック
 
@@ -195,7 +198,7 @@ Pull Request を発行すると、[auto_assign_myteams.yml](.github/../auto_assi
 
 ## 4.2 PDF 生成
 
-ブランチ名と同じタイトルで Pull Request を発行すると、sotsuron.tex と gaiyou.tex から PDF を自動生成し、
+Pull Request を発行すると、thesis.tex と abstract.tex から PDF を自動生成し、
 GitHub 上の [Release](../../releases) に配置する。
 
 TeX 環境を持っていない人に PDF を見てもらうのに利用できる。
