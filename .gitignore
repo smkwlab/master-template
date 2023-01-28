@@ -353,7 +353,7 @@ tags
 # Persistent undo
 [._]*.un~
 
-## VScode specific
+## VSCode specific
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
