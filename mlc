@@ -6,6 +6,15 @@ if [ -d .devcontainer ]; then
   exit
 fi
 
+case $(uname -m) in
+    x86_64)
+      branch=alpine
+      ;;
+    *)
+      branch=latest
+      ;;
+esac
+
 mkdir .tmp
 git mv .gitignore .latexmkrc .textlintrc .tmp
 git commit -m "mv files temporary to avoid conflict"
@@ -13,7 +22,7 @@ git commit -m "mv files temporary to avoid conflict"
 echo merge LaTeX environment
 git remote add latexenv https://github.com/smkwlab/latex-environment.git
 git fetch latexenv
-git merge --allow-unrelated-histories -m "merge latex environment" latexenv/main
+git merge --allow-unrelated-histories -m "merge latex environment" latexenv/${branch}
 git remote remove latexenv
 
 git rm -r .gitignore .latexmkrc .textlintrc
