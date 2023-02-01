@@ -13,7 +13,7 @@ git commit -m "mv files temporary to avoid conflict"
 echo merge LaTeX environment
 git remote add latexenv https://github.com/smkwlab/latex-environment.git
 git fetch latexenv
-git merge --allow-unrelated-histories -m "merge latex environment" latexenv/main
+git merge --allow-unrelated-histories -m "merge latex environment" latexenv/alpine
 git remote remove latexenv
 
 git rm -r .gitignore .latexmkrc .textlintrc
