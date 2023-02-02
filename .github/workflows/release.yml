@@ -13,7 +13,7 @@ env:
 jobs:
   release:
     runs-on: ubuntu-latest
-    container: ghcr.io/smkwlab/latex-image
+    container: ghcr.io/smkwlab/alpine-texlive-ja-textlint:latest
     steps:
       - name: Checkout git repo
         uses: actions/checkout@v3
