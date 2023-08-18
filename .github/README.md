@@ -30,7 +30,8 @@
 手元の PC(mac) に既に LaTeX 環境を持っている場合、
 このリポジトリ単体で使っても良い。
 そうでない場合、
-LaTeX の環境は[下川研 LaTeX 環境利用方法](https://github.com/smkwlab/sotsuron-template/blob/main/.github/README-mlc.md)に従って構築すること。
+LaTeX の環境は[Add Linx DevContainer](https://github.com/smkwlab/aldc/blob/main/README.md))に従って、
+下川研 LaTeX 環境を構築すること。
 下川研 LaTeX 環境を使うことで、LaTeX 以外に
 textlint も利用可能となるので、
 この方法をとることを推奨する。
