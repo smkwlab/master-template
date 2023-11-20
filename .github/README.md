@@ -30,11 +30,13 @@
 手元の PC(mac) に既に LaTeX 環境を持っている場合、
 このリポジトリ単体で使っても良い。
 そうでない場合、
-LaTeX の環境は[Add Linx DevContainer](https://github.com/smkwlab/aldc/blob/main/README.md))に従って、
+LaTeX の環境は[aldc (Add Linx DevContainer)](https://github.com/smkwlab/aldc/blob/main/README.md)に従って、
 下川研 LaTeX 環境を構築すること。
 下川研 LaTeX 環境を使うことで、LaTeX 以外に
 textlint も利用可能となるので、
 この方法をとることを推奨する。
+
+なお、aldc を使用した場合、使用後に一度 git で commit と push をしておくこと。
 
 ## 1. 基本的な使い方
 
@@ -64,7 +66,7 @@ textlint も利用可能となるので、
 1. ブラウザで[このリポジトリー](https://github.com/smkwlab/master-template)にアクセスし `Use this template`  ボタンをクリック
 1. リポジトリ作成画面になる
    - `Owner` は `smkwlab` のまま
-   - `Repository name` は、 `k99rs999-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
+   - `Repository name` は、 `k99gjk99-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
    - 公開範囲は `Private` のまま
 1. `Create repository from template` ボタンをクリック
 
