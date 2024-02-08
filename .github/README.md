@@ -30,7 +30,7 @@
 LaTeX の環境は[aldc (Add Linx DevContainer)](https://github.com/smkwlab/aldc/blob/main/README.md)に従って、
 下川研 LaTeX 環境を構築すること。
 下川研 LaTeX 環境を使うことで、LaTeX 以外に
-textlint も利用可能となるので、
+textlint も利用可能となる。
 
 ## 1. 基本的な使い方
 
@@ -60,7 +60,7 @@ textlint も利用可能となるので、
 1. ブラウザで[このリポジトリー](https://github.com/smkwlab/master-template)にアクセスし `Use this template`  ボタンをクリック
 1. リポジトリ作成画面になる
    - `Owner` は `smkwlab` のまま
-   - `Repository name` は、 `k99rs999-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
+   - `Repository name` は、 `k99gjk99-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
    - 公開範囲は `Private` のまま
 1. `Create repository from template` ボタンをクリック
 
