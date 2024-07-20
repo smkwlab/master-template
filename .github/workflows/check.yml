@@ -1,0 +1,18 @@
+name: Build and Release PDF
+
+on:
+  pull_request_target:
+
+permissions:
+  contents: write
+
+jobs:
+  thesis:
+    uses: ./.github/workflows/build-and-release.yml
+    with:
+      file: thesis
+
+  abstract:
+    uses: ./.github/workflows/build-and-release.yml
+    with:
+      file: abstract
