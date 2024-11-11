@@ -24,13 +24,8 @@
 ## 0. 初期設定
 
 これは、九州産業大学大学院情報科学研究科下川研究室で利用している修士論文のテンプレートリポジトリである。
-下川研では、卒業論文を作成する標準的な環境として、LaTeX と GitHub を利用する。
+下川研では、修士論文を作成する標準的な環境として、LaTeX と GitHub を利用する。
 文章作成に LaTeX、バージョン管理およびバックアップとして GitHub を使う。
-
-LaTeX の環境は[aldc (Add Linx DevContainer)](https://github.com/smkwlab/aldc/blob/main/README.md)に従って、
-下川研 LaTeX 環境を構築すること。
-下川研 LaTeX 環境を使うことで、LaTeX 以外に
-textlint も利用可能となる。
 
 ## 1. 基本的な使い方
 
@@ -44,12 +39,15 @@ textlint も利用可能となる。
 
 1. テンプレートリポジトリをコピーして自分のリポジトリーを作る
 2. リポジトリーをPCにクローンする
-3. 自分のリポジトリーで、作業用ブランチを作成する
+3. [aldc (Add Linx DevContainer)](https://github.com/smkwlab/aldc/blob/main/README.md)を使って
+下川研 LaTeX 環境を構築する
+4. この時点で一度 commit, push をする(mainブランチを更新する)
+5. 自分のリポジトリーで、作業用ブランチを作成する
    - 今後、作業用ブランチは下川への提出毎に新たに作成する
-4. 作業用ブランチ上でレポートを作成（更新）する
-5. 添削を依頼するために Pull Request を送る
-6. 提出したので、次の作業用ブランチを作成する
-7. 下川から OK のリプライが来たら終了。NG だった場合は、下川からのリプライにしたがって、6. で作成した**新しい作業用ブランチ**上でレポートを更新(3. に戻る)
+6. 作業用ブランチ上でレポートを作成（更新）する
+7. 添削を依頼するために Pull Request を送る
+8. 提出したので、次の作業用ブランチを作成する
+9. 下川から OK のリプライが来たら終了。NG だった場合は、下川からのリプライにしたがって、8. で作成した**新しい作業用ブランチ**上でレポートを更新(5. に戻る)
 
 ## 2. 具体的な作業内容
 
@@ -57,10 +55,10 @@ textlint も利用可能となる。
 
 ### 2.1 自分用のリモートリポジトリの作成
 
-1. ブラウザで[このリポジトリー](https://github.com/smkwlab/master-template)にアクセスし `Use this template`  ボタンをクリック
+1. ブラウザで[このリポジトリー](https://github.com/smkwlab/sotsuron-template)にアクセスし `Use this template`  ボタンをクリック
 1. リポジトリ作成画面になる
    - `Owner` は `smkwlab` のまま
-   - `Repository name` は、 `k99gjk99-master` のように自分の学籍番号を入れ、さらに修士論文であることが分かるような名前にする
+   - `Repository name` は、 `k99rs999-sotsuron` のように自分の学籍番号を入れ、さらに卒業論文であることが分かるような名前にする
    - 公開範囲は `Private` のまま
 1. `Create repository from template` ボタンをクリック
 
@@ -70,7 +68,23 @@ textlint も利用可能となる。
 1. `Open with GitHub Desktop` をクリック
 1. 自分のPCでリポジトリーを置くディレクトリを確認して `Clone` ボタンをクリック
 
-### 2.3 第1版用作業ブランチを作成
+### 2.3 aldc によるLaTeX環境の構築
+
+1. [aldc](https://github.com/smkwlab/aldc)の[インストール方法](https://github.com/smkwlab/aldc/blob/main/README.md#インストール方法)に従って作業する
+
+### 2.4 commit, push
+
+1. LaTeX環境構築終了時点で、main ブランチに commit と push をする
+    - GitHub Desktop, git コマンドライン何を使っても良い
+    - コミットメッセージは自由。お勧めは `LaTeX環境構築`
+
+### 2.5 目次案の記述
+
+1. おそらく目次案の作成が終わっていると思うので、作成済みの目次案を元に [sotsuron.tex](../sotsuron.tex) に `chapter`, `section`, `subsection` などを記述していく
+1. VSCode 上で ▷ ボタンをクリックすることで sotsuron.pdf を生成
+    - ▷の右横の虫眼鏡が右下に描かれたアイコンをクリックすることでVSCode上で PDF をプレビューできる
+
+### 2.6 第1版用作業ブランチを作成
 
 1. GitHub Desktop のウィンドウの最上部には、３つのボタンが並んでいる。
 一番左側がリポジトリの選択。一番右側が中央リポジトリとのやり取りの処理。
@@ -93,9 +107,9 @@ Current Branch
 1st-draft
 ```
 
-### 2.4 編集作業
+### 2.7 編集作業
 
-1. GitHub Desktop で現在の草稿用ブランチが選択されていることを確認して thesis.tex を編集
+1. GitHub Desktop で現在の草稿用ブランチが選択されていることを確認して sotsuron.tex を編集
    - `Open in Visual Studio Code` をクリックして Visual Studio Code で作業
    - このとき、Visual Studio Code の左下に、ブランチの名前が表示されている
    - 必要に応じて別のファイル（画像など）を追加したりして良い
@@ -107,9 +121,9 @@ Current Branch
 5. `Push origin` をクリックして、リモートリポジトリーに Push
 6. 1.に戻る
 
-### 2.5 添削依頼
+### 2.8 添削依頼
 
-1. thesis.pdf を印刷し、その印刷版を読み（可能であれば音読）、推敲。問題があれば、[2.4](#24-編集作業)に戻る
+1. sotsuron.pdf を印刷し、その印刷版を読み（可能であれば音読）、推敲。問題があれば、[2.4](#24-編集作業)に戻る
 2. GitHub Desktop で `Create Pull Request` をクリックして、**Pull Request** を作成
 3. ブラウザが開くので、`Title` に **現在のブランチ名** を記述
    - `Title` はデフォルトでなんらかの文字列が入っているが、それは削除する。
@@ -117,7 +131,7 @@ Current Branch
 4. `Write` タブに変更点などを記述
 5. `Create pull request` ボタンをクリック
 
-### 2.6 次版用ブランチ作成
+### 2.9 次版用ブランチ作成
 
 1. GitHub Desktop で `Current Branch` ボタンをクリック
 2. `New Branch` ボタンをクリック
@@ -126,7 +140,7 @@ Current Branch
 5. `Create branch` ボタンをクリック
 6. `Publish branch` ボタンをクリック
 
-### 2.7 添削結果待ち
+### 2.10 添削結果待ち
 
 1. 下川からの返事を待つ
 2. 返事の内容は、リモートリポジトリの `Pull Requests` タブの中にある
@@ -142,9 +156,10 @@ Current Branch
       - 提出終了。お疲れ様。
 4. NG ならば現在の草稿上で編集([2.4](#24-編集作業)に戻る)
 
-### 2.8 作業サンプル
+### 2.11 作業サンプル
 
 擬似的に 2.1〜2.8 の操作を[サンプルリポジトリ](https://github.com/smkwlab/toshi-thesis-branch-test)で実施してみた。
+ただし、aldc 開発以前に実施したので、aldc に関する履歴はない。
 Github 上で、Insights → Network
 と選択することで、[ブランチ分岐](https://github.com/smkwlab/toshi-thesis-branch-test/network)を確認できる。
 
@@ -201,7 +216,7 @@ GitHub 上の [Release](../../releases) に配置する。
 TeX 環境を持っていない人に PDF を見てもらうのに利用できる。
 ただし、ここで作成された Release は一般公開はされない。
 
-この機能が不要な場合には [release.yml](.github/../workflows/release.yml) を削除する。
+この機能が不要な場合には [check.yml](.github/../workflows/check.yml) を削除する。
 
 ## 5. その他
 
