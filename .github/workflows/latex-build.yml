@@ -1,0 +1,24 @@
+name: Build and Release PDF
+
+on:
+  pull_request_target:
+
+permissions:
+  contents: write
+
+jobs:
+  thesis:
+    runs-on: ubuntu-latest
+    container: ghcr.io/smkwlab/texlive-ja-textlint:2023c-alpine
+    steps:
+      - uses: smkwlab/latex-release-action@v1
+        with:
+          file: ${{ github.job }}
+
+  abstract:
+    runs-on: ubuntu-latest
+    container: ghcr.io/smkwlab/texlive-ja-textlint:2023c-alpine
+    steps:
+      - uses: smkwlab/latex-release-action@v1
+        with:
+          file: ${{ github.job }}
