@@ -7,18 +7,10 @@ permissions:
   contents: write
 
 jobs:
-  thesis:
+  build-and-release-pdf:
     runs-on: ubuntu-latest
     container: ghcr.io/smkwlab/texlive-ja-textlint:2023c-alpine
     steps:
-      - uses: smkwlab/latex-release-action@v1
+      - uses: smkwlab/latex-release-action@v2
         with:
-          file: ${{ github.job }}
-
-  abstract:
-    runs-on: ubuntu-latest
-    container: ghcr.io/smkwlab/texlive-ja-textlint:2023c-alpine
-    steps:
-      - uses: smkwlab/latex-release-action@v1
-        with:
-          file: ${{ github.job }}
+          files: thesis, abstract
